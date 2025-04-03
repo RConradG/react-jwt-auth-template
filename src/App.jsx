@@ -1,8 +1,7 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Routes, Route } from 'react-router';
 import './App.css'
 
+import SignUpForm from './components/SignUpForm/SignUpForm';
 import NavBar from './components/NavBar/NavBar';
 
 const App = () => {
@@ -10,7 +9,12 @@ const App = () => {
   return (
     <>
       <NavBar />
-      <h1>Hello, friend!</h1>
+      <Routes>
+        <Route 
+          path="/sign-up"
+          element={<SignUpForm/ >}
+        />
+      </Routes>
     </>
   );
 };
