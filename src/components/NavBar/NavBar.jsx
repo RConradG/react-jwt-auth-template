@@ -16,15 +16,22 @@ const NavBar = () => {
           <>
             <li>Welcome, {user.username}</li>
             <li>
-              <Link to="/">Sign Out</Link>
+              <Link onClick={handleSignOut} to="/">Sign Out</Link>
             </li>
           </>
         ) : (
-          <li>
-            <Link onClick={handleSignOut} to="/sign-up">
-              Sign Up
-            </Link>
-          </li>
+          <>
+            <li>
+              <Link to="/sign-in">
+                Sign In
+              </Link>
+            </li>
+            <li>
+              <Link to="/sign-up">
+                Sign Up
+              </Link>
+            </li>
+          </>
         )}
       </ul>
     </nav>
