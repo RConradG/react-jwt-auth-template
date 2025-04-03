@@ -6,7 +6,7 @@ function UserProvider( { children }) { // the children prop represents each comp
   const [user, setUser] = useState(null);
 
   const value = { user, setUser }; // shorthand prop syntax
-  
+
   return (
     <UserContext.Provider value={value}>
       { children }
@@ -14,4 +14,4 @@ function UserProvider( { children }) { // the children prop represents each comp
   );
 };
 
-export { UserProvider }; // common export convention
+export { UserProvider, UserContext }; // common export convention
